@@ -1,0 +1,49 @@
+<div *ngIf="recipe">
+  <div class="row">
+    <div class="col-xs-12">
+      <img src="" alt="" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <img
+        src="{{ recipe.imagePath }}"
+        alt="{{ recipe.name }}"
+        class="img-fluid"
+      />
+      <h1>{{ recipe.name }}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="dropdown" appDropdown #r="appDropdown">
+        <button type="button" class="btn btn-primary dropdown-toggle">
+          Manange Recipe
+        </button>
+        <ul class="dropdown-menu mt-1" [ngClass]="{ show: r.isOpen }">
+          <li style="cursor: pointer">
+            <a href="#" class="dropdown-item">To Shopping List</a>
+          </li>
+          <li>
+            <a routerLink=":id/edit" class="dropdown-item">Edit Recipe</a>
+          </li>
+          <li><a href="#" class="dropdown-item">Delete Recipe</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      {{ recipe.description }}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="list-group" *ngFor="let ing of recipe.ingredients">
+        <li class="list-group-item mb-2">{{ ing.name }} - {{ ing.amount }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Example single danger button -->
