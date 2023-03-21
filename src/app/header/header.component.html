@@ -38,13 +38,13 @@
         </ul>
 
         <ul class="navbar-nav ms-auto">
-          <li class="dropup-center" appDropdown #r="appDropdown">
-            <a href="#" class="nav-link dropdown-toggle" role="button"
+          <li class="dropdown-center" appDropdown #r="appDropdown">
+            <a  class="nav-link dropdown-toggle" role="button"
               >Manage</a
             >
             <ul class="dropdown-menu" [ngClass]="{ show: r.isOpen }">
-              <li><a class="dropdown-item" href="#">Save Data</a></li>
-              <li><a class="dropdown-item" href="#">Fetch Dat</a></li>
+              <li><a class="dropdown-item" >Save Data</a></li>
+              <li><a class="dropdown-item">Fetch Dat</a></li>
             </ul>
           </li>
         </ul>

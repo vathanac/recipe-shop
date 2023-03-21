@@ -22,12 +22,12 @@
         </button>
         <ul class="dropdown-menu mt-1" [ngClass]="{ show: r.isOpen }">
           <li style="cursor: pointer">
-            <a href="#" class="dropdown-item">To Shopping List</a>
+            <a  class="dropdown-item" (click)="onToShoppingList()">To Shopping List</a>
           </li>
           <li>
             <a routerLink=":id/edit" class="dropdown-item" (click)="toEdit()">Edit Recipe</a>
           </li>
-          <li><a href="#" class="dropdown-item">Delete Recipe</a></li>
+          <li><a  class="dropdown-item" (click)="onDelete()" type="button">Delete Recipe</a></li>
         </ul>
       </div>
     </div>
